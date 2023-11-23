@@ -1,0 +1,303 @@
+body{
+    background-color: white;
+}
+.company{
+    
+    position: absolute;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 1;
+    top:12%;
+    left:0;
+     transition:  0.5s ease;
+}
+.p{
+    
+    visibility: hidden;
+}
+
+  
+.companyheading{
+    font-size:15vh;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.company.active{
+    background-color: transparent;
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    transition: top 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.p.active{
+    
+    font-size: larger;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    visibility: visible;
+
+}
+.s{
+    position: absolute;
+}
+.s.active{
+    position: absolute;
+    top: 120%;
+    transform: translateX(-585%);
+    transition: transform 2.5s ease-in-out 2s;
+    
+}
+.companyheading.active{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transform: translateY(-100px); 
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+}
+.form{
+    visibility: hidden;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+    gap:5px;
+    top: 40%;
+}
+.form.active{
+    visibility: visible;
+    transition: visibility 2s ease-in 4s;
+}
+.input_box{
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ .input{
+    padding: 3%;
+    border-radius: 20%;
+}
+.drp{
+    font-size: x-large;
+}
+.drpop{
+    visibility: hidden;
+    position: absolute;
+    left: 62.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    top: 20%;
+}
+.drpop.active{
+    visibility: visible;
+}
+.drpopen{
+    font-size: larger;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+.drpopen.active{
+    position: relative;
+    color: transparent;
+    z-index: 1;
+
+}
+.drpclose{
+visibility: hidden;
+    position: absolute;
+    top: 15%;
+    font-size: small;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+.drpclose.active{
+visibility: visible;
+}
+.drop{
+    visibility: hidden;
+    position: absolute;
+    display: inline-block;
+    top: 68%;
+    right: 1%;
+    color: #fff;
+    height:10vh;
+    width: 15vh;
+    border-radius: 15%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.drop.active{
+    visibility:visible;
+}
+.droroptions{
+    padding: 8%;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+}
+.line1{
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    position:absolute;
+    top: 50%;
+    left: 0;
+  }
+.box{
+    background-color: black;
+    position: static;
+    width: 100%;
+    font-weight: bold;
+    height:100vh;
+    left: 0%;
+    top: 0%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.des{
+    visibility: hidden;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    gap:5px;
+    top: 25%;
+}
+.des.active{
+    visibility: visible;
+}
+.heroHeading{
+    color: #fff;
+    font-size: 100px;
+    margin-bottom: 24px;
+}
+
+.heroHeading span{
+    background: #00c3ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text; 
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+.heroDescription{
+    background: #DA22FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9733EE, #DA22FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9733EE, #DA22FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text; 
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 60px;
+
+}
+
+.subb{
+    position: relative;
+    height: 12%;
+    top:20%;  
+}
+.subb.active{
+    visibility: hidden;
+    transition: visibility .2s ease-out;
+}
+.sub{
+    border: 2px solid hsl(0, 96%, 38%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    font-size: small;
+    color: red;
+    font-weight:lighter;
+    
+    
+}
+.sub::before{
+    content: '';
+    border: 2px solid hsl(0, 98%, 43%);
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 12px hsl(0, 98%, 43%);
+    transition: .3s;
+    animation: button 3s infinite;
+}
+
+@keyframes button {
+    0%{
+        box-shadow:  0 0 12px hsl(0, 98%, 43%);
+    }
+    50%{
+        box-shadow:  0 0 24px hsl(0, 98%, 43%);
+    }
+}
+
+.box1{
+    position: absolute;
+    z-index: -1;
+    width: 100hv;
+    background-color: papayawhip;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height:100vh;
+    left: 0%;
+    top: 0%;
+}
+.box1.active{
+    position:static;
+}
+.box2{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    background-color: pink;
+    font-weight: bold;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    left: 0%;
+    top: 0%;
+}
+.box2.active{
+    position: static;
+    
+}
+.mainbox{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="company">
+        
+        <form class="form">
+            <div class="input_box">
+                
+                <input id="2" type="date" class="input" >
+            </div>
+            <div class="input_box">
+              
+                <input type="date" class="input" >
+            </div>
+            <div class="input_box">
+                <label class="drp">Vechile</label>
+            </div>
+            
+        </form>
+    
+        <div class="drpop ">
+            <p class="drpopen ">></p>
+            <p class="drpclose ">X</p>
+            <center>
+            <div class="drop">
+                <a href="#bike" class="droroptions">bike</a>
+                <div class="line1"></div>
+                <a href="#car" class="droroptions">car</a>
+            </div>
+        </center>
+        </div>
+        
+        <div class="s  ">
+            <h1 class="companyheading  ">cruizers</h1>
+        </div>
+    
+    </div>
+    <div class="mainbox">
+        <section id="start" class="box">
+            <div class="container">
+            <div class="des">
+                <center>
+                <h1 class="heroHeading">Choose Your <span>transport</span></h1>
+                <p class="heroDescription">Unlimited Possibilities</p>
+            </center>
+            </div>
+            <div class="subb">
+                <div class="sub">
+                    start
+                </div>
+        </div>
+            </div>
+            
+        </section>
+        
+        <section id="bike" class="box1 ">
+            <center>
+              <div class="k">
+                bike
+            </div>  
+            </center>
+        </section>
+        <section id="car" class="box2 ">
+            <div class="k">
+                car
+            </div>
+        </section>
+    </div>
+    
+    
+</body>
+<script>
+    let company = document.querySelector('.form');
+    let c= document.querySelector('.company');
+    let d= document.querySelector('.drpop');
+    let des= document.querySelector('.des');
+    let companyname = document.querySelector('.companyheading');
+    let subb = document.querySelector('.subb');
+    let s = document.querySelector('.s');
+    let p = document.querySelector('.p');
+    let box1 = document.querySelector('.box1');
+    let box2 = document.querySelector('.box2');
+    document.querySelector('.sub').onclick=function(){
+            this.classList.toggle('active');
+            company.classList.toggle('active');
+            companyname.classList.toggle('active');
+            subb.classList.toggle('active');
+            s.classList.toggle('active');
+            p.classList.toggle('active');
+            
+        }
+        document.querySelector('.subb').onclick=function(){
+           c.classList.toggle('active');
+           d.classList.toggle('active');
+           des.classList.toggle('active');
+           box1.classList.toggle('active');
+           box2.classList.toggle('active');
+        } 
+        
+        let drpopen = document.querySelector('.drpopen');
+        let drpclose = document.querySelector('.drpclose');
+        let drop = document.querySelector('.drop');
+        document.querySelector('.drpopen').onclick=function(){
+            this.classList.toggle('active');
+            drpclose.classList.toggle('active');
+            drop.classList.toggle('active');
+
+        }
+
+        let dropOptions = document.querySelectorAll('.droroptions');
+
+    dropOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            // Remove active class from drpclose and add it to drpopen
+            document.querySelector('.drpclose').classList.remove('active');
+            document.querySelector('.drpopen').classList.remove('active');
+
+            // Hide the dropdown
+            document.querySelector('.drop').classList.remove('active');
+        });
+    });
+        
+</script>
+</html>
