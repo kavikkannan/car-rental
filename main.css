@@ -1,15 +1,11 @@
-body{
-    background-color: white;
-}
+
 .company{
-    
+    color: white;
     position: absolute;
     width: 100%;
-    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     z-index: 1;
     top:12%;
     left:0;
@@ -27,26 +23,29 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .company.active{
+    position: fixed;
+
     background-color: transparent;
     top: 0%;
     width: 100%;
     height: 10%;
     transition: top 0.2s ease-in-out;
-    z-index: 2;
+    
 }
 
-.p.active{
+/* .p.active{
     
     font-size: larger;
     font-weight: bold;
     font-family:Georgia, 'Times New Roman', Times, serif ;
     visibility: visible;
 
-}
+} */
 .s{
     position: absolute;
 }
 .s.active{
+
     position: absolute;
     top: 120%;
     transform: translateX(-585%);
@@ -54,6 +53,7 @@ body{
     
 }
 .companyheading.active{
+
     font-size: 2rem;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -74,35 +74,57 @@ body{
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 40vh;
+    height: 10vh;
     gap:5px;
     top: 40%;
+
 }
 .form.active{
+    position: absolute;
+    top: 0%;
+    background-color: black;
     visibility: visible;
     transition: visibility 2s ease-in 4s;
 }
-.input_box{
+/* .input_box{
+    top: 10%;
     padding-left: 2%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.input_box{
+    top: 10%;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     align-items: center;
 }
-
  .input{
+    
     padding: 3%;
     border-radius: 20%;
 }
 .drp{
     font-size: x-large;
 }
+/* .drpop{
+    visibility: hidden;
+    position: absolute;
+    left: 62.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    top: 13%;
+} */
 .drpop{
     visibility: hidden;
     position: absolute;
     left: 62.5%;
     padding-left: 1%;
     padding-right: 1%;
-    top: 20%;
+    top: 48%;
 }
 .drpop.active{
     visibility: visible;
@@ -139,7 +161,8 @@ visibility: visible;
     color: #fff;
     height:10vh;
     width: 15vh;
-    border-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
     display: flex;
     flex-direction: column;
     background-color: white;
